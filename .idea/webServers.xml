@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4eeca94f-4d93-45ec-a9e3-8cb4259d7f5a" name="AIOT开发板" url="http://192.168.123.130">
+        <fileTransfer rootFolder="/aa/MaturityRecognition" host="192.168.123.130" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
