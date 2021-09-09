@@ -254,6 +254,7 @@ class MainWindows(QMainWindow, Ui_MainWindow):
 class VideoBox(QMainWindow, Ui_VideoWindow):
 
     def __init__(self, capWidth, capHeight,workMode):
+
         super(VideoBox, self).__init__(None)
         # 工作模式选择
         global rootpath
@@ -443,8 +444,6 @@ class VideoBox(QMainWindow, Ui_VideoWindow):
         # 设计视频采集参数
         self.showImage = None
         self.limg = None
-
-
 
         # 线程1相机采集
 

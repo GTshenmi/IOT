@@ -24,6 +24,16 @@ def MainApplication():
 
     sys.exit(app.exec_())
 
+def RunAIModel(modelpath,mode):
+
+    cvNet = cv2.dnn.readNetFromTensorflow(modelpath)
+    cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
+
+    cvOut = cvNet.forward()
+    point = np.argmax(cvOut)
+
+    return point
+
 # 算法线程
 class ThreadIde(QThread):
 
@@ -72,11 +82,8 @@ class ThreadIde(QThread):
 
                     if(os.path.exists(rootpath+'model/Wheat/period/model_1.15.pb')):
 
-                        cvNet = cv2.dnn.readNetFromTensorflow(rootpath+'model/Wheat/period/model_1.15.pb')
-                        cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
+                        point = RunAIModel(rootpath+'model/Wheat/period/model_1.15.pb',self.workmode)
 
-                        cvOut = cvNet.forward()
-                        point = np.argmax(cvOut)
                         self.text = WheatMaturityIndexCh[int(point)]
                         self.trantext = WheatMaturityIndexEn[int(point)]
 
@@ -89,11 +96,7 @@ class ThreadIde(QThread):
 
                     if(os.path.exists(rootpath+'model/Wheat/virus/mode_porday_rust1.1_cnn1.15.pb')):
 
-                        cvNet = cv2.dnn.readNetFromTensorflow(rootpath+'model/Wheat/virus/model_wheatsick1.15GPU.pb')
-                        cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
-
-                        cvOut = cvNet.forward()
-                        point = np.argmax(cvOut)
+                        point = RunAIModel(rootpath + 'model/Wheat/virus/mode_porday_rust1.1_cnn1.15.pb', self.workmode)
 
                         if point == 0:
                             pass
@@ -150,11 +153,7 @@ class ThreadIde(QThread):
 
                     if(os.path.exists(rootpath+'model/mode1.1_bugs1.15.pb')):
 
-                        cvNet = cv2.dnn.readNetFromTensorflow(rootpath+'model/mode1.1_bugs1.15.pb')
-                        cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
-
-                        cvOut = cvNet.forward()
-                        point = np.argmax(cvOut)
+                        point = RunAIModel(rootpath + 'model/Wheat/virus/mode_porday_rust1.1_cnn1.15.pb',self.workmode)
                         self.text = WheatPestsIndexCh[int(point)]
                         self.trantext = WheatPestsIndexEn[int(point)]
 
@@ -168,11 +167,7 @@ class ThreadIde(QThread):
 
                     if(os.path.exists(rootpath+'model/Rice/period/mode_paddy_rice_cnn1.15.pb')):
 
-                        cvNet = cv2.dnn.readNetFromTensorflow(rootpath+'model/Rice/period/mode_paddy_rice_cnn1.15.pb')
-                        cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
-
-                        cvOut = cvNet.forward()
-                        point = np.argmax(cvOut)
+                        point = RunAIModel(rootpath + 'model/Wheat/virus/mode_porday_rust1.1_cnn1.15.pb',self.workmode)
 
                         self.text = RiceMaturityIndexCh[int(point)]
                         self.trantext = RiceMaturityIndexEn[int(point)]
@@ -186,11 +181,7 @@ class ThreadIde(QThread):
 
                     if(os.path.exists(rootpath+'model/Rice/virus/mode_sick_rice_cnn1.15.pb')):
 
-                        cvNet = cv2.dnn.readNetFromTensorflow(rootpath+'model/Rice/virus/mode_sick_rice_cnn1.15.pb')
-                        cvNet.setInput(cv2.dnn.blobFromImage(limg, 1. / 255, size=(224, 224)))
-
-                        cvOut = cvNet.forward()
-                        point = np.argmax(cvOut)
+                        point = RunAIModel(rootpath + 'model/Wheat/virus/mode_porday_rust1.1_cnn1.15.pb',self.workmode)
 
                         self.text = RiceDiseaseIndexCh[int(point)]
                         self.trantext = RiceDiseaseIndexEn[int(point)]
