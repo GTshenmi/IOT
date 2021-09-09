@@ -6,7 +6,7 @@
 
 <div align=center><img src="https://github.com/GTshenmi/IOT/blob/main/Display%20Image/0.png"/></div>
 
------------------------------------------------------------------------------------------------
+
 
 #### `UI展示`
 -----------------------------------------------------------------------------------------------
@@ -16,7 +16,6 @@
 |:---------------:|:---------------:|  
 |![image5](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/2.jpeg)|![image2](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/3.jpeg)|
 |![image3](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/4.jpeg)|![image1](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/5.jpeg)|
------------------------------------------------------------------------------------------------
 
 
 
