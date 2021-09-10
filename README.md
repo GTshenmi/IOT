@@ -6,8 +6,6 @@
 
 <div align=center><img src="https://github.com/GTshenmi/IOT/blob/main/Display%20Image/0.png"/></div>
 
-
-
 #### `项目展示`
 -----------------------------------------------------------------------------------------------
 
@@ -21,8 +19,10 @@
 |   主界面   |   小麦成熟度识别:灌浆期   |  
 |![image3](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/4.jpeg)|![image1](https://github.com/GTshenmi/IOT/blob/main/Display%20Image/5.jpeg)|
 
-
-
+#### `项目文件说明`
+-----------------------------------------------------------------------------------------------
+* **Source**：项目的源程序代码及程序模版
+* **Technical Report**：项目的技术报告。
 
 
 
