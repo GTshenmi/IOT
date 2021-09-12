@@ -1,5 +1,5 @@
 ﻿# 边缘智能无人机稻麦监测系统
-----------rice and wheat monitoring system based on deep convolutional neural network
+----------rice and wheat monitoring system based on deep convolutional neural network 
 
 #### `项目介绍`
 -----------------------------------------------------------------------------------------------
